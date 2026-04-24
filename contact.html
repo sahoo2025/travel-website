@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Wanderlust Travels</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">✈️ Wanderlust Travels</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="hero" style="height: 60vh; background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/seed/contact-hero/1920/600.jpg');">
+        <div class="hero-content">
+            <h1>Get in Touch</h1>
+            <p>We're here to help you plan your perfect journey</p>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section id="contact-info" class="container">
+        <h2 class="section-title">Contact Information</h2>
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-content">
+                    <h3>📍 Visit Our Office</h3>
+                    <p>123 Travel Street<br>
+                    Andheri East, Mumbai<br>
+                    Maharashtra 400069<br>
+                    India</p>
+                    <p><strong>Office Hours:</strong><br>
+                    Monday - Saturday: 9:00 AM - 6:00 PM<br>
+                    Sunday: Closed</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>📞 Call Us</h3>
+                    <p><strong>Main Office:</strong><br>
+                    +91 98765 43210</p>
+                    <p><strong>Toll Free:</strong><br>
+                    1800-123-4567</p>
+                    <p><strong>WhatsApp:</strong><br>
+                    +91 98765 43210</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>📧 Email Us</h3>
+                    <p><strong>General Inquiries:</strong><br>
+                    info@wanderlusttravels.com</p>
+                    <p><strong>Bookings:</strong><br>
+                    bookings@wanderlusttravels.com</p>
+                    <p><strong>Support:</strong><br>
+                    support@wanderlusttravels.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact-form-section" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Send Us a Message</h2>
+            <form class="contact-form" id="contactForm" onsubmit="return validateForm(event)">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error-message" id="nameError">Please enter your full name</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="emailError">Please enter a valid email address</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+                    <span class="error-message" id="phoneError">Please enter a valid 10-digit phone number</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a subject</option>
+                        <option value="booking">Booking Inquiry</option>
+                        <option value="package">Package Information</option>
+                        <option value="support">Customer Support</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="partnership">Partnership</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <span class="error-message" id="subjectError">Please select a subject</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="destination">Preferred Destination (Optional)</label>
+                    <input type="text" id="destination" name="destination" placeholder="e.g., Goa, Paris, Bali">
+                </div>
+
+                <div class="form-group">
+                    <label for="travel-date">Preferred Travel Date (Optional)</label>
+                    <input type="date" id="travel-date" name="travel-date">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="6" required placeholder="Tell us about your travel plans or questions..."></textarea>
+                    <span class="error-message" id="messageError">Please enter your message (minimum 10 characters)</span>
+                </div>
+
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>How do I book a travel package?</h3>
+                        <p>You can book through our website by selecting your preferred package and clicking "Book Now", or call our customer service team for assistance.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>What payment methods do you accept?</h3>
+                        <p>We accept all major credit cards, debit cards, net banking, UPI, and EMI options for your convenience.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Can I customize my travel package?</h3>
+                        <p>Yes! We offer customizable packages. Contact our travel experts to create a personalized itinerary based on your preferences.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>What is included in the package price?</h3>
+                        <p>Package inclusions vary by destination. Generally includes accommodation, meals as specified, transfers, and sightseeing tours.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Do you provide travel insurance?</h3>
+                        <p>Yes, comprehensive travel insurance is available for all our packages. We highly recommend purchasing it for your safety.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>What is your cancellation policy?</h3>
+                        <p>Cancellation policies vary by package. Generally, cancellations made 30+ days before travel receive a full refund minus processing fees.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="map-section" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Find Us on Map</h2>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Office Location</h3>
+                    <p>Visit our office in Mumbai for personalized travel consultation. Our team is ready to help you plan your dream vacation.</p>
+                    <div style="background: #f0f0f0; height: 400px; display: flex; align-items: center; justify-content: center; margin-top: 1rem; border-radius: 10px;">
+                        <p>🗺️ Interactive Map<br>
+                        <small>123 Travel Street, Andheri East, Mumbai</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Message (Hidden by default) -->
+    <div id="successMessage" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); z-index: 1001; text-align: center;">
+        <h3 style="color: #28a745; margin-bottom: 1rem;">✅ Message Sent Successfully!</h3>
+        <p>Thank you for contacting us. We'll get back to you within 24 hours.</p>
+        <button class="cta-button" onclick="closeSuccessMessage()" style="margin-top: 1rem;">Close</button>
+    </div>
+
+    <!-- Overlay for success message -->
+    <div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000;" onclick="closeSuccessMessage()"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Wanderlust Travels</h3>
+                    <p>Your trusted travel partner for unforgettable journeys around the world. We make travel dreams come true.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="LinkedIn">in</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="packages.html">Travel Packages</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Popular Destinations</h3>
+                    <ul>
+                        <li><a href="destinations.html">Goa</a></li>
+                        <li><a href="destinations.html">Paris</a></li>
+                        <li><a href="destinations.html">Bali</a></li>
+                        <li><a href="destinations.html">Dubai</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>📧 info@wanderlusttravels.com</li>
+                        <li>📞 +91 98765 43210</li>
+                        <li>📍 123 Travel Street, Mumbai, India</li>
+                        <li>🕐 Mon-Sat: 9AM-6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Wanderlust Travels. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

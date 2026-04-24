@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - Wanderlust Travels</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">✈️ Wanderlust Travels</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="hero" style="height: 60vh; background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/seed/destinations-hero/1920/600.jpg');">
+        <div class="hero-content">
+            <h1>Explore Amazing Destinations</h1>
+            <p>Discover the world's most beautiful places and create unforgettable memories</p>
+        </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section id="search-filter" class="container">
+        <div class="search-filter">
+            <div class="filter-group">
+                <input type="text" id="searchInput" placeholder="Search destinations...">
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                    <option value="beach">Beach</option>
+                    <option value="mountain">Mountain</option>
+                    <option value="city">City</option>
+                    <option value="adventure">Adventure</option>
+                    <option value="cultural">Cultural</option>
+                </select>
+                <select id="priceFilter">
+                    <option value="">All Price Ranges</option>
+                    <option value="budget">Budget (Under ₹30,000)</option>
+                    <option value="mid">Mid-range (₹30,000 - ₹70,000)</option>
+                    <option value="luxury">Luxury (Above ₹70,000)</option>
+                </select>
+                <button class="filter-button" onclick="filterDestinations()">Filter</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Grid -->
+    <section id="destinations-list">
+        <div class="container">
+            <h2 class="section-title">Popular Destinations</h2>
+            <div class="card-grid" id="destinationGrid">
+                <!-- Goa -->
+                <div class="card destination-card" data-category="beach" data-price="budget">
+                    <img src="https://picsum.photos/seed/goa-beach2/400/300.jpg" alt="Goa" class="card-image">
+                    <div class="card-content">
+                        <h3>Goa, India</h3>
+                        <p>🏖️ Beach Paradise</p>
+                        <p>Experience the perfect blend of Portuguese heritage and Indian culture on pristine beaches.</p>
+                        <div class="destination-overlay">
+                            <p><strong>Best Time:</strong> November to March</p>
+                            <p><strong>Highlights:</strong> Beaches, Nightlife, Water Sports, Portuguese Architecture</p>
+                            <p><strong>Starting from:</strong> ₹15,999</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paris -->
+                <div class="card destination-card" data-category="city" data-price="luxury">
+                    <img src="https://picsum.photos/seed/paris-city/400/300.jpg" alt="Paris" class="card-image">
+                    <div class="card-content">
+                        <h3>Paris, France</h3>
+                        <p>🗼 City of Lights</p>
+                        <p>Discover romance, art, and culture in the heart of Europe.</p>
+                        <div class="destination-overlay">
+                            <p><strong>Best Time:</strong> April to June, September to October</p>
+                            <p><strong>Highlights:</strong> Eiffel Tower, Louvre Museum, Seine River, French Cuisine</p>
+                            <p><strong>Starting from:</strong> ₹85,999</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bali -->
+                <div class="card destination-card" data-category="beach" data-price="mid">
+                    <img src="https://picsum.photos/seed/bali-island/400/300.jpg" alt="Bali" class="card-image">
+                    <div class="card-content">
+                        <h3>Bali, Indonesia</h3>
+                        <p>🏝️ Island Paradise</p>
+                        <p>Find spiritual peace and adventure in Indonesia's tropical gem.</p>
+                        <div class="destination-overlay">
+                            <p><strong>Best Time:</strong> April to October</p>
+                            <p><strong>Highlights:</strong> Temples, Rice Terraces, Beaches, Spa & Wellness</p>
+                            <p><strong>Starting from:</strong> ₹42,999</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dubai -->
+                <div class="card destination-card" data-category="city" data-price="luxury">
+                    <img src="https://picsum.photos/seed/dubai-skyline/400/300.jpg" alt="Dubai" class="card-image">
+                    <div class="card-content">
+                        <h3>Dubai, UAE</h3>
+                        <p>🏙️ Modern Oasis</p>
+                        <p>Experience luxury, innovation, and Middle Eastern charm.</p>
+                        <div class="destination-overlay">
+                            <p><strong>Best Time:</strong> November to March</p>
+                            <p><strong>Highlights:</strong> Burj Khalifa, Desert Safari, Shopping, Gold Souk</p>
+                            <p><strong>Starting from:</strong> ₹65,999</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Switzerland -->
+                <div class="card destination-card" data-category="mountain" data-price="luxury">
+                    <img src="https://picsum.photos/seed/swiss-alps/400/300.jpg" alt="Switzerland" class="card-image">
+                    <div class="card-content">
+                        <h3>Switzerland</h3>
+                        <p>🏔️ Alpine Paradise</p>
+                        <p>Discover breathtaking mountains, pristine lakes, and charming villages.</p>
+                        <div class="destination-overlay">
+                            <p><strong>Best Time:</strong> June to September</p>
+                            <p><strong>Highlights:</strong> Alps, Chocolate, Cheese, Scenic Trains, Skiing</p>
+                            <p><strong>Starting from:</strong> ₹95,999</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kerala -->
+                <div class="card destination-card" data-category="beach" data-price="budget">
+                    <img src="https://picsum.photos/seed/kerala-backwaters/400/300.jpg" alt="Kerala" class="card-image">
+                    <div class="card-content">
+                        <h3>Kerala, India</h3>
+                        <p>🌴 God's Own Country</p>
+                        <p>Experience backwaters, beaches, and rich cultural heritage.</p>
+                        <div class="destination-overlay">
+                            <p><strong>Best Time:</strong> September to March</p>
+                            <p><strong>Highlights:</strong> Backwaters, Houseboats, Ayurveda, Tea Plantations</p>
+                            <p><strong>Starting from:</strong> ₹18,999</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Singapore -->
+                <div class="card destination-card" data-category="city" data-price="mid">
+                    <img src="https://picsum.photos/seed/singapore-city/400/300.jpg" alt="Singapore" class="card-image">
+                    <div class="card-content">
+                        <h3>Singapore</h3>
+                        <p>🌆 Modern Metropolis</p>
+                        <p>Experience the perfect blend of modernity and multicultural charm.</p>
+                        <div class="destination-overlay">
+                            <p><strong>Best Time:</strong> February to April</p>
+                            <p><strong>Highlights:</strong> Marina Bay, Gardens by the Bay, Universal Studios, Food</p>
+                            <p><strong>Starting from:</strong> ₹55,999</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thailand -->
+                <div class="card destination-card" data-category="beach" data-price="budget">
+                    <img src="https://picsum.photos/seed/thailand-beach/400/300.jpg" alt="Thailand" class="card-image">
+                    <div class="card-content">
+                        <h3>Thailand</h3>
+                        <p>🐘 Land of Smiles</p>
+                        <p>Discover tropical beaches, ancient temples, and vibrant culture.</p>
+                        <div class="destination-overlay">
+                            <p><strong>Best Time:</strong> November to March</p>
+                            <p><strong>Highlights:</strong> Bangkok, Phuket, Temples, Street Food, Islands</p>
+                            <p><strong>Starting from:</strong> ₹22,999</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Maldives -->
+                <div class="card destination-card" data-category="beach" data-price="luxury">
+                    <img src="https://picsum.photos/seed/maldives-resort/400/300.jpg" alt="Maldives" class="card-image">
+                    <div class="card-content">
+                        <h3>Maldives</h3>
+                        <p>🏝️ Tropical Luxury</p>
+                        <p>Experience ultimate luxury in overwater villas and pristine beaches.</p>
+                        <div class="destination-overlay">
+                            <p><strong>Best Time:</strong> November to April</p>
+                            <p><strong>Highlights:</strong> Overwater Villas, Diving, Snorkeling, Spa</p>
+                            <p><strong>Starting from:</strong> ₹1,25,999</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nepal -->
+                <div class="card destination-card" data-category="mountain" data-price="budget">
+                    <img src="https://picsum.photos/seed/nepal-himalaya/400/300.jpg" alt="Nepal" class="card-image">
+                    <div class="card-content">
+                        <h3>Nepal</h3>
+                        <p>🏔️ Himalayan Kingdom</p>
+                        <p>Discover mountains, monasteries, and ancient culture.</p>
+                        <div class="destination-overlay">
+                            <p><strong>Best Time:</strong> October to December, March to May</p>
+                            <p><strong>Highlights:</strong> Mount Everest, Kathmandu, Trekking, Temples</p>
+                            <p><strong>Starting from:</strong> ₹25,999</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Japan -->
+                <div class="card destination-card" data-category="cultural" data-price="luxury">
+                    <img src="https://picsum.photos/seed/japan-temple/400/300.jpg" alt="Japan" class="card-image">
+                    <div class="card-content">
+                        <h3>Japan</h3>
+                        <p>🗾 Land of the Rising Sun</p>
+                        <p>Experience ancient traditions and cutting-edge technology.</p>
+                        <div class="destination-overlay">
+                            <p><strong>Best Time:</strong> March to May, October to November</p>
+                            <p><strong>Highlights:</strong> Tokyo, Kyoto, Mount Fuji, Cherry Blossoms, Sushi</p>
+                            <p><strong>Starting from:</strong> ₹78,999</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Greece -->
+                <div class="card destination-card" data-category="cultural" data-price="mid">
+                    <img src="https://picsum.photos/seed/greece-islands/400/300.jpg" alt="Greece" class="card-image">
+                    <div class="card-content">
+                        <h3>Greece</h3>
+                        <p>🏛️ Ancient Civilization</p>
+                        <p>Explore ancient history, stunning islands, and Mediterranean beauty.</p>
+                        <div class="destination-overlay">
+                            <p><strong>Best Time:</strong> April to June, September to October</p>
+                            <p><strong>Highlights:</strong> Athens, Santorini, Mykonos, Ancient Ruins</p>
+                            <p><strong>Starting from:</strong> ₹58,999</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Wanderlust Travels</h3>
+                    <p>Your trusted travel partner for unforgettable journeys around the world. We make travel dreams come true.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="LinkedIn">in</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="packages.html">Travel Packages</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Popular Destinations</h3>
+                    <ul>
+                        <li><a href="destinations.html">Goa</a></li>
+                        <li><a href="destinations.html">Paris</a></li>
+                        <li><a href="destinations.html">Bali</a></li>
+                        <li><a href="destinations.html">Dubai</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>📧 info@wanderlusttravels.com</li>
+                        <li>📞 +91 98765 43210</li>
+                        <li>📍 123 Travel Street, Mumbai, India</li>
+                        <li>🕐 Mon-Sat: 9AM-6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Wanderlust Travels. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

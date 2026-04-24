@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Packages - Wanderlust Travels</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">✈️ Wanderlust Travels</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="hero" style="height: 60vh; background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/seed/packages-hero/1920/600.jpg');">
+        <div class="hero-content">
+            <h1>Exclusive Travel Packages</h1>
+            <p>Handcrafted itineraries for unforgettable experiences at the best prices</p>
+        </div>
+    </section>
+
+    <!-- Package Categories -->
+    <section id="package-categories" class="container">
+        <h2 class="section-title">Browse by Category</h2>
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-content">
+                    <h3>🏖️ Beach Packages</h3>
+                    <p>Relax on pristine beaches with our all-inclusive beach vacation packages.</p>
+                    <a href="#beach-packages" class="cta-button">View Packages</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>🏔️ Mountain Packages</h3>
+                    <p>Adventure awaits in the mountains with trekking and scenic tours.</p>
+                    <a href="#mountain-packages" class="cta-button">View Packages</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>🏛️ Cultural Packages</h3>
+                    <p>Immerse yourself in rich history and cultural heritage tours.</p>
+                    <a href="#cultural-packages" class="cta-button">View Packages</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3🎯 Adventure Packages</h3>
+                    <p>Thrilling adventures and adrenaline-pumping activities.</p>
+                    <a href="#adventure-packages" class="cta-button">View Packages</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beach Packages -->
+    <section id="beach-packages" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">🏖️ Beach Packages</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="https://picsum.photos/seed/goa-beach-package/400/250.jpg" alt="Goa Beach Package" class="card-image">
+                    <div class="card-content">
+                        <h3>Goa Beach Paradise</h3>
+                        <p><strong>5 Days / 4 Nights</strong></p>
+                        <ul class="package-features">
+                            <li>Beach Resort Accommodation</li>
+                            <li>Daily Breakfast & Dinner</li>
+                            <li>Water Sports Activities</li>
+                            <li>North & South Goa Tour</li>
+                            <li>Cruise on Mandovi River</li>
+                        </ul>
+                        <div class="card-price">₹25,999 per person</div>
+                        <button class="cta-button" onclick="bookPackage('Goa Beach Paradise')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://picsum.photos/seed/maldives-luxury/400/250.jpg" alt="Maldives Luxury" class="card-image">
+                    <div class="card-content">
+                        <h3>Maldives Luxury Escape</h3>
+                        <p><strong>6 Days / 5 Nights</strong></p>
+                        <ul class="package-features">
+                            <li>Overwater Villa Stay</li>
+                            <li>All Meals Included</li>
+                            <li>Snorkeling Equipment</li>
+                            <li>Sunset Dolphin Cruise</li>
+                            <li>Couple Spa Session</li>
+                        </ul>
+                        <div class="card-price">₹1,45,999 per person</div>
+                        <button class="cta-button" onclick="bookPackage('Maldives Luxury Escape')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://picsum.photos/seed/bali-beach-resort/400/250.jpg" alt="Bali Beach Resort" class="card-image">
+                    <div class="card-content">
+                        <h3>Bali Beach Resort</h3>
+                        <p><strong>6 Days / 5 Nights</strong></p>
+                        <ul class="package-features">
+                            <li>4-Star Beach Resort</li>
+                            <li>Daily Breakfast</li>
+                            <li>Temple Tours</li>
+                            <li>Traditional Dance Show</li>
+                            <li>Water Sports Package</li>
+                        </ul>
+                        <div class="card-price">₹45,999 per person</div>
+                        <button class="cta-button" onclick="bookPackage('Bali Beach Resort')">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mountain Packages -->
+    <section id="mountain-packages">
+        <div class="container">
+            <h2 class="section-title">🏔️ Mountain Packages</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="https://picsum.photos/seed/swiss-alps-package/400/250.jpg" alt="Swiss Alps" class="card-image">
+                    <div class="card-content">
+                        <h3>Swiss Alps Adventure</h3>
+                        <p><strong>7 Days / 6 Nights</strong></p>
+                        <ul class="package-features">
+                            <li>Mountain Hotel Accommodation</li>
+                            <li>Daily Breakfast</li>
+                            <li>Jungfraujoch Railway Tour</li>
+                            <li>Matterhorn Visit</li>
+                            <li>Scenic Lake Cruise</li>
+                        </ul>
+                        <div class="card-price">₹98,999 per person</div>
+                        <button class="cta-button" onclick="bookPackage('Swiss Alps Adventure')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://picsum.photos/seed/himalaya-trekking/400/250.jpg" alt="Himalaya Trekking" class="card-image">
+                    <div class="card-content">
+                        <h3>Himalaya Trekking Expedition</h3>
+                        <p><strong>8 Days / 7 Nights</strong></p>
+                        <ul class="package-features">
+                            <li>Tented Accommodation</li>
+                            <li>All Meals Included</li>
+                            <li>Professional Guide</li>
+                            <li>Camping Equipment</li>
+                            <li>Permits & Insurance</li>
+                        </ul>
+                        <div class="card-price">₹35,999 per person</div>
+                        <button class="cta-button" onclick="bookPackage('Himalaya Trekking Expedition')">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultural Packages -->
+    <section id="cultural-packages" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">🏛️ Cultural Packages</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="https://picsum.photos/seed/paris-cultural/400/250.jpg" alt="Paris Cultural" class="card-image">
+                    <div class="card-content">
+                        <h3>Paris Cultural Experience</h3>
+                        <p><strong>7 Days / 6 Nights</strong></p>
+                        <ul class="package-features">
+                            <li>3-Star Hotel Stay</li>
+                            <li>Daily Continental Breakfast</li>
+                            <li>Louvre Museum Tour</li>
+                            <li>Palace of Versailles</li>
+                            <li>Seine River Cruise</li>
+                        </ul>
+                        <div class="card-price">₹89,999 per person</div>
+                        <button class="cta-button" onclick="bookPackage('Paris Cultural Experience')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://picsum.photos/seed/japan-cultural/400/250.jpg" alt="Japan Cultural" class="card-image">
+                    <div class="card-content">
+                        <h3>Japan Cultural Heritage</h3>
+                        <p><strong>8 Days / 7 Nights</strong></p>
+                        <ul class="package-features">
+                            <li>4-Star Hotel Stay</li>
+                            <li>Daily Breakfast</li>
+                            <li>Temple Tours in Kyoto</li>
+                            <li>Traditional Tea Ceremony</li>
+                            <li>Mount Fuji Day Trip</li>
+                        </ul>
+                        <div class="card-price">₹1,12,999 per person</div>
+                        <button class="cta-button" onclick="bookPackage('Japan Cultural Heritage')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://picsum.photos/seed/egypt-pyramids/400/250.jpg" alt="Egypt Pyramids" class="card-image">
+                    <div class="card-content">
+                        <h3>Egypt Ancient Wonders</h3>
+                        <p><strong>6 Days / 5 Nights</strong></p>
+                        <ul class="package-features">
+                            <li>5-Star Hotel Stay</li>
+                            <li>Daily Breakfast</li>
+                            <li>Pyramids of Giza Tour</li>
+                            <li>Egyptian Museum</li>
+                            <li>Nile River Dinner Cruise</li>
+                        </ul>
+                        <div class="card-price">₹68,999 per person</div>
+                        <button class="cta-button" onclick="bookPackage('Egypt Ancient Wonders')">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adventure Packages -->
+    <section id="adventure-packages">
+        <div class="container">
+            <h2 class="section-title">🎯 Adventure Packages</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="https://picsum.photos/seed/dubai-adventure/400/250.jpg" alt="Dubai Adventure" class="card-image">
+                    <div class="card-content">
+                        <h3>Dubai Adventure Plus</h3>
+                        <p><strong>5 Days / 4 Nights</strong></p>
+                        <ul class="package-features">
+                            <li>4-Star Hotel Stay</li>
+                            <li>Daily Breakfast</li>
+                            <li>Desert Safari</li>
+                            <li>Burj Khalifa Visit</li>
+                            <li>Water Park Tickets</li>
+                        </ul>
+                        <div class="card-price">₹65,999 per person</div>
+                        <button class="cta-button" onclick="bookPackage('Dubai Adventure Plus')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://picsum.photos/seed/newzealand-adventure/400/250.jpg" alt="New Zealand Adventure" class="card-image">
+                    <div class="card-content">
+                        <h3>New Zealand Thrill Seeker</h3>
+                        <p><strong>10 Days / 9 Nights</strong></p>
+                        <ul class="package-features">
+                            <li>3-Star Hotel Stay</li>
+                            <li>Daily Breakfast</li>
+                            <li>Bungee Jumping</li>
+                            <li>Milford Sound Cruise</li>
+                            <li>Hobbiton Tour</li>
+                        </ul>
+                        <div class="card-price">₹1,35,999 per person</div>
+                        <button class="cta-button" onclick="bookPackage('New Zealand Thrill Seeker')">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section id="special-offers" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">🔥 Special Offers</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Early Bird Discount</h3>
+                        <p>Book 60 days in advance and get 15% off on all international packages!</p>
+                        <p><strong>Code: EARLY15</strong></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Group Discount</h3>
+                        <p>Travel with 4+ people and get 20% off on domestic packages!</p>
+                        <p><strong>Code: GROUP20</strong></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Honeymoon Special</h3>
+                        <p>Get complimentary room upgrade and candlelight dinner on honeymoon packages!</p>
+                        <p><strong>Code: HONEYMOON</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Wanderlust Travels</h3>
+                    <p>Your trusted travel partner for unforgettable journeys around the world. We make travel dreams come true.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="LinkedIn">in</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="packages.html">Travel Packages</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Popular Destinations</h3>
+                    <ul>
+                        <li><a href="destinations.html">Goa</a></li>
+                        <li><a href="destinations.html">Paris</a></li>
+                        <li><a href="destinations.html">Bali</a></li>
+                        <li><a href="destinations.html">Dubai</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>📧 info@wanderlusttravels.com</li>
+                        <li>📞 +91 98765 43210</li>
+                        <li>📍 123 Travel Street, Mumbai, India</li>
+                        <li>🕐 Mon-Sat: 9AM-6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Wanderlust Travels. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
